@@ -15,6 +15,7 @@ public class CollectGem : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D target)
     {
+        PersistentManager.dataStore.gemsCollected += 1;
         // Tag of the GameObject
         if (target.gameObject.tag == "Player")
         {
