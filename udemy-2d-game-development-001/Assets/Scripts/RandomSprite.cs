@@ -11,7 +11,7 @@ public class RandomSprite : MonoBehaviour {
         if (sprites.Length > 0)
         {
             myRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
-            myRenderer.sortingOrder = Random.Range(-10, 10);
+            myRenderer.sortingOrder = Random.Range(1, 11);
         }	
 	}
 }
