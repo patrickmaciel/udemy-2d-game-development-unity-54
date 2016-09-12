@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 400f;
     public float maxVelocity = 4f;
 
+    public AudioClip soundEffect;
+
     private bool Grounded;
 
     // Use this for initialization
@@ -52,6 +54,11 @@ public class PlayerMovement : MonoBehaviour
         // Jump if grounded and button pressed
         if (Grounded == true && Input.GetButton("Jump"))
         {
+            if (soundEffect)
+            {
+                AudioSource.PlayClipAtPoint(soundEffect, transform.position);
+            }
+
             Grounded = false;
             force.y = jumpForce;
             an.SetInteger("AnimState", 2);

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CollectGem : MonoBehaviour {
 
+    public AudioClip soundEffect;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -19,6 +21,10 @@ public class CollectGem : MonoBehaviour {
         // Tag of the GameObject
         if (target.gameObject.tag == "Player")
         {
+            if (soundEffect)
+            {
+                AudioSource.PlayClipAtPoint(soundEffect, transform.position);
+            }
             Destroy(gameObject);
         }
     }
