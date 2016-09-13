@@ -7,9 +7,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator an;
 
-    public float movementSpeed = 10f;
+    public float movementSpeed = 30f;
     public float jumpForce = 400f;
-    public float maxVelocity = 4f;
+    public float maxVelocity = 8f;
 
     public AudioClip soundEffect;
 
