@@ -29,6 +29,28 @@ public class PersistentManager : MonoBehaviour {
 		}
 	}
 
+    public void endGameWithWin()
+    {
+        if (currentLevelID > highestLevelCompleted)
+        {
+            highestLevelCompleted = currentLevelID;
+        }
+        Save();
+
+        // else lock the next level
+
+        Debug.Log("Game over - win");
+        Debug.Log(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void endGameWithLoss()
+    {
+        Debug.Log("Game over - loss");
+        Debug.Log(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MainMenu");
+    }
+
 	// Use this for initialization
 	void Start () {
 
