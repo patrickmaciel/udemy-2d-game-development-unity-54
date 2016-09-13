@@ -31,6 +31,8 @@ public class PersistentManager : MonoBehaviour {
 
     public void endGameWithWin()
     {
+        Debug.Log("currentLevelID = " + currentLevelID);
+        Debug.Log("highestLevelCompleted = " + highestLevelCompleted);
         if (currentLevelID > highestLevelCompleted)
         {
             highestLevelCompleted = currentLevelID;

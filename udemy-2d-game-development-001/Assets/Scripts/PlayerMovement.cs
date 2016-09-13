@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         // Alter player direction
         if (moveHorizontal > 0)
         {
-            print("Right");
+            // print("Right");
             transform.localScale = new Vector3(1, 1, 1);
             if (Grounded)
             {
@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
             }
         } else if (moveHorizontal < 0)
         {
-            print("Left");
+            // print("Left");
             transform.localScale = new Vector3(-1, 1, 1);
             if (Grounded)
             {
@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
             }
         } else
         {
-            print("Still");
+            // print("Still");
             if (Grounded)
             {
                 an.SetInteger("AnimState", 0); 
